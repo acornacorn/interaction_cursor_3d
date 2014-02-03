@@ -13,12 +13,6 @@ find_package(catkin REQUIRED COMPONENTS geometry_msgs interaction_cursor_msgs rv
 ## System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED COMPONENTS system)
 
-find_package(PkgConfig REQUIRED)
-
-# Ogre
-pkg_check_modules(OGRE OGRE)
-link_directories( ${OGRE_LIBRARY_DIRS} )
-
 # Qt Stuff
 find_package(Qt4 REQUIRED)
 include(${QT_USE_FILE})
@@ -51,7 +45,6 @@ include_directories(include
                     ${catkin_INCLUDE_DIRS} 
                     ${Boost_INCLUDE_DIRS}
                     ${QT_INCLUDE_DIR}
-                    ${OGRE_INCLUDE_DIRS}
                     )
 
 link_directories(${Boost_LIBRARY_DIRS})
@@ -72,7 +65,7 @@ set(SOURCE_FILES
 
 add_library(interaction_cursor_rviz ${SOURCE_FILES} ${MOC_SOURCES})
 add_dependencies(interaction_cursor_rviz interaction_cursor_msgs_gencpp)
-target_link_libraries(interaction_cursor_rviz ${catkin_LIBRARIES} ${OGRE_LIBRARIES} ${QT_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(interaction_cursor_rviz ${catkin_LIBRARIES} ${QT_LIBRARIES} ${Boost_LIBRARIES})
 
 
 #############
