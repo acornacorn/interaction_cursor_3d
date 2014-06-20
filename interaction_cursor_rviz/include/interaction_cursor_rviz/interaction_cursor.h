@@ -38,8 +38,8 @@
 #include "rviz/default_plugin/interactive_markers/interactive_marker_control.h"
 #include "rviz/display.h"
 
-#include <OGRE/OgreSceneNode.h>
-#include <OGRE/OgreSceneManager.h>
+#include <OgreSceneNode.h>
+#include <OgreSceneManager.h>
 
 #include <QMenu>
 #include <QAction>

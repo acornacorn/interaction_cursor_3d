@@ -54,10 +54,10 @@
 #include "rviz/default_plugin/interactive_markers/interactive_marker_control.h"
 #include "rviz/default_plugin/interactive_markers/interactive_marker.h"
 
-#include <OGRE/OgreSceneNode.h>
-#include <OGRE/OgreSceneManager.h>
-#include <OGRE/OgreRenderable.h>
-#include <OGRE/OgreRenderWindow.h>
+#include <OgreSceneNode.h>
+#include <OgreSceneManager.h>
+#include <OgreRenderable.h>
+#include <OgreRenderWindow.h>
 
 #include <QApplication>
 #include <QMenu>
